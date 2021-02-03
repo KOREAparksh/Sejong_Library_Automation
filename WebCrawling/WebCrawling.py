@@ -1,9 +1,6 @@
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-import requests 
-import re
+import requests
 from bs4 import BeautifulSoup
-import time
 
 def initOptions() :
     # 옵션 생성
@@ -39,12 +36,29 @@ def expandDisplay(browser) :
     return browser
 
 
-
-def getData() :
-    browser = initBrowser()
-    url = "https://book.naver.com/bookdb/book_detail.nhn?bid=16852884" #펼쳐야하는거
-    enterURL(browser, url)
+def getBookDetailUrl(registNumber) :
+    url  = "https://book.naver.com/search/search.nhn?&query="
+    url = url + str(registNumber)
+    print(url)
     
+    res = requests.get(url)
+    res.raise_for_status()
+    soup = BeautifulSoup(res.text, "lxml")
+    
+    try :
+        bidUrl = soup.find("ul", attrs = {"id" : "searchBiblioList"})
+        return bidUrl.find("a")["href"]
+    except AttributeError :
+        return None
+
+
+def getData(browser, registNumber) :
+    
+    url = getBookDetailUrl(registNumber) 
+    if url is None :
+        return None
+    
+    browser.get(url)
     html = browser.page_source
     soup = BeautifulSoup(html, "lxml")
     
@@ -53,6 +67,7 @@ def getData() :
     tableOfContents =  soup.find("div", attrs = {"id" : "tableOfContentsContent"})
     #print(tableOfContents.get_text())
     
-    browser.quit()
-    
     return bookIntro.get_text(), tableOfContents.get_text()
+
+# browser = initBrowser()
+# getData(browser, 9791185401492)
