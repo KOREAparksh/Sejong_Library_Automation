@@ -8,7 +8,12 @@ def isValidRange(start, end) :
         return False
     return True
 
-#############main start point
+########################
+
+startNumber = 0
+endNumber = 0
+
+#########################main start point
 
 #등록번호 입력
 while True : 
@@ -23,4 +28,6 @@ while True :
     if isValidRange(startNumber[6:12], endNumber[6:12]) :
         break
 
-
+#등록번호 확인
+if output.confirmBeforeTheRunning(startNumber, endNumber) == "Cancel" : 
+    sys.exit()
