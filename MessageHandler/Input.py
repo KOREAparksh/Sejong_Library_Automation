@@ -16,7 +16,7 @@ def checkFrontFormat(number) :
 
 def isValidNumber(number) :
     checkLength(number)    
-    checkFrontFormat(number[0:6])
+    checkFrontFormat(number[0 : 6])
     
     return 
 
@@ -43,4 +43,4 @@ def inputRegistNummber(position):
             msg = "등록번호를 정확히 입력하세요"
             continue
 
-#print(getStartRegistNumber())
+print(getStartRegistNumber())
