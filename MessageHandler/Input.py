@@ -43,4 +43,4 @@ def inputRegistNummber(position):
             msg = "등록번호를 정확히 입력하세요"
             continue
 
-print(getStartRegistNumber())
+#print(getStartRegistNumber())
