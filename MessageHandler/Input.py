@@ -7,17 +7,14 @@ def checkLength(number) :
     return
 
 def checkFrontFormat(number) :
-    
     for i in range(0,6) : 
         if number[i] is not '0' :
             raise ValueError
-    
     return
 
 def isValidNumber(number) :
     checkLength(number)    
     checkFrontFormat(number[0 : 6])
-    
     return 
 
 def getStartRegistNumber() :
@@ -42,5 +39,3 @@ def inputRegistNummber(position):
         except :
             msg = "등록번호를 정확히 입력하세요"
             continue
-
-print(getStartRegistNumber())

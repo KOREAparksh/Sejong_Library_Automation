@@ -7,4 +7,6 @@ def checkBeforeTheRunning(start, end) :
     
     return result
 
-checkBeforeTheRunning("000000919111", "000000123123")
+def alertInvalidRange() :
+    pyautogui.alert("끝번호가 시작번호보다 작습니다.\n다시 입력하세요.")
+    return 
