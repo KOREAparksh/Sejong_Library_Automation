@@ -1,5 +1,6 @@
 import MessageHandler.Input as input
 import MessageHandler.Output as output
+import WindowsHandler.FindBooks as findBooks
 import pyautogui
 import sys
 
@@ -44,6 +45,7 @@ if output.confirmBeforeTheRunning(registNumberString) == "Cancel" :
     sys.exit()
 
 #등록번호 검색
+findBooks.putsRegistNumber(registNumberString)
 
 #체크박스 선택
 
