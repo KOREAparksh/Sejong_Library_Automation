@@ -12,6 +12,11 @@ def isValidRange(start, end) :
         return False
     return True
 
+def pushNextButton() :
+    region = (start_x + w_width//2, start_y+30, w_width//2, w_height//2)
+    pyautogui.click(pyautogui.locateOnScreen("C:/Program Files (x86)/Sejong Library Automation/asset/nextButton.png"
+                                                , region = region))
+
 def checkLastBook() :
     if pyautogui.locateOnScreen("C:/Program Files (x86)/Sejong Library Automation/asset/nextButton_grayscale.png") :
         output.sendAlertMessage("끝났습니다!")
@@ -87,6 +92,7 @@ while now_count < count :
     #이미 초록목차가 작성된 책인지 확인
     if detailHandler.checkAlreadyHave(w) :
         checkLastBook()
+        pushNextButton()
         continue
 
     #ISBN 추출
@@ -97,3 +103,4 @@ while now_count < count :
     
     #버튼 비활성화 되면 끝남.
     checkLastBook()
+    pushNextButton()
