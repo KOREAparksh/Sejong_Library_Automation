@@ -53,6 +53,13 @@ time.sleep(2)
 findBooks.selectCheckBox(int(endNumber) - int(startNumber)) 
 
 #상세보기 진입
+pyautogui.move(200, 0)
+pyautogui.rightClick() 
+time.sleep(0.3)
+pyautogui.rightClick() 
+time.sleep(0.3)
+pyautogui.press("down")
+pyautogui.press("enter")
 
 #창크기 추출
 
