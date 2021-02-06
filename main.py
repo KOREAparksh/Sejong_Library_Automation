@@ -1,5 +1,6 @@
 import MessageHandler.Input as input
 import MessageHandler.Output as output
+import pyautogui
 import sys
 
 def isValidRange(start, end) :
@@ -15,6 +16,13 @@ endNumber = 0
 registNumberString = ""                                                   #등록번호 입력에 쓰일 문자열
 
 #########################main start point
+
+#창 활성화 확인
+w = pyautogui.getWindowsWithTitle("통합작업환경")
+
+if len(w) == 0 :
+    output.sendAlertMessage("통합작업환경(IWS)를 열고 실행해주세요.")
+    sys.exit()
 
 #등록번호 입력
 while True : 
