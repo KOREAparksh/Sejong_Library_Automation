@@ -72,10 +72,19 @@ w_height = w[0].size.height
 start_x = w[0].left
 start_y = w[0].top
 
-#이미 초록목차가 작성된 책인지 확인
+#저장시스템
+count = int(endNumber) - int(startNumber)
+now_count = 0
 
-#ISBN 추출
+while now_count < count :
+    
+    now_count += 1
+    #이미 초록목차가 작성된 책인지 확인
+    if detailHandler.checkAlreadyHave(w) :
+        continue
 
-#초록목차 크롤링
+    #ISBN 추출
 
-#초록목차 저장
+    #초록목차 크롤링
+
+    #초록목차 저장
