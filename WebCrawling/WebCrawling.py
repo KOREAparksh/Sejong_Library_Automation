@@ -15,21 +15,17 @@ def initBrowser():
     return browser
 
 def expandDisplay(browser) :
-    try :
-        #초록
-        elem = browser.find_element_by_xpath(".//*[@id='bookIntroOpen']/..")
-        if elem.get_attribute("style") == "display: block;" :
-            elem = browser.find_element_by_id("bookIntroOpen")
-            elem.click()
-        
-        #목차
-        elem = browser.find_element_by_xpath(".//*[@id='tableOfContentsOpen']/..")
-        if elem.get_attribute("style") == "display: block;" :
-            elem = browser.find_element_by_id("tableOfContentsOpen")
-            elem.click()
-    except :
-        return browser
+    #초록
+    elem = browser.find_element_by_xpath(".//*[@id='bookIntroOpen']/..")
+    if elem.get_attribute("style") == "display: block;" :
+        elem = browser.find_element_by_id("bookIntroOpen")
+        elem.click()
     
+    #목차
+    elem = browser.find_element_by_xpath(".//*[@id='tableOfContentsOpen']/..")
+    if elem.get_attribute("style") == "display: block;" :
+        elem = browser.find_element_by_id("tableOfContentsOpen")
+        elem.click()
     return browser
 
 def getBookDetailUrl(registNumber) :
