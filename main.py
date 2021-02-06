@@ -1,6 +1,7 @@
 import MessageHandler.Input as input
 import MessageHandler.Output as output
 import WindowsHandler.FindBooks as findBooks
+import WindowsHandler.DetailViewHandler as detailHandler
 import pyautogui
 import time
 import sys
@@ -61,9 +62,15 @@ time.sleep(0.3)
 pyautogui.press("down")
 pyautogui.press("enter")
 
-#창크기 추출
-
 #관계정보 탭 선택 (1회)
+time.sleep(1.5)
+detailHandler.selectRelationTab(w)
+
+#창크기 추출
+w_width = w[0].size.width
+w_height = w[0].size.height
+start_x = w[0].left
+start_y = w[0].top
 
 #이미 초록목차가 작성된 책인지 확인
 
