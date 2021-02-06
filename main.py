@@ -121,3 +121,6 @@ while now_count < count :
     #버튼 비활성화 되면 끝남.
     checkLastBook()
     pushNextButton()
+    
+output.sendAlertMessage("끝났습니다!")
+browser.quit()
