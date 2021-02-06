@@ -2,6 +2,7 @@ import MessageHandler.Input as input
 import MessageHandler.Output as output
 import WindowsHandler.FindBooks as findBooks
 import pyautogui
+import time
 import sys
 
 def isValidRange(start, end) :
@@ -48,6 +49,8 @@ if output.confirmBeforeTheRunning(registNumberString) == "Cancel" :
 findBooks.putsRegistNumber(registNumberString)
 
 #체크박스 선택
+time.sleep(2)
+findBooks.selectCheckBox(int(endNumber) - int(startNumber)) 
 
 #상세보기 진입
 

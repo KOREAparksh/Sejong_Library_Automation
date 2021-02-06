@@ -35,3 +35,17 @@ def putsRegistNumber(registNumberString) :
     pyautogui.press("enter")
     return
 
+def selectCheckBox(_cnt) :
+    #체크박스 선택
+    cnt = _cnt
+    now_cnt = 0
+    w = pyautogui.getWindowsWithTitle("통합작업환경")
+    region = (w[0].left, w[0].top + int(w[0].size.height/2), int(w[0].size.width/8), int(w[0].size.height/2))
+    while now_cnt <= cnt :
+        for i  in pyautogui.locateAllOnScreen("C:/Program Files (x86)/Sejong Library Automation/asset/checkbox.png", confidence = 0.9,region = region):
+            #print(i)
+            pyautogui.click(i)
+            now_cnt += 1
+        if now_cnt <= cnt :
+            pyautogui.scroll(-500)
+    return
