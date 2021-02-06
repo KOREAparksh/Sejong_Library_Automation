@@ -2,6 +2,7 @@ import MessageHandler.Input as input
 import MessageHandler.Output as output
 import WindowsHandler.FindBooks as findBooks
 import WindowsHandler.DetailViewHandler as detailHandler
+import WebCrawling.WebCrawling as WebCrawling
 import pyautogui
 import pyperclip
 import time
@@ -88,6 +89,7 @@ count = int(endNumber) - int(startNumber)
 now_count = 0
 center_x = w[0].center.x
 center_y = w[0].center.y
+browser = WebCrawling.initBrowser()
 
 while now_count < count :
     
@@ -111,8 +113,10 @@ while now_count < count :
     isbn = isbn[index : index + 13]
 
     #초록목차 크롤링
+    bookIntro, tableContent = WebCrawling.getData(browser, isbn)
 
     #초록목차 저장
+    detailHandler.saveInformation(bookIntro, tableContent, w)
     
     #버튼 비활성화 되면 끝남.
     checkLastBook()
