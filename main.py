@@ -3,6 +3,7 @@ import MessageHandler.Output as output
 import WindowsHandler.FindBooks as findBooks
 import WindowsHandler.DetailViewHandler as detailHandler
 import pyautogui
+import pyperclip
 import time
 import sys
 
@@ -85,6 +86,8 @@ start_y = w[0].top
 #저장시스템
 count = int(endNumber) - int(startNumber)
 now_count = 0
+center_x = w[0].center.x
+center_y = w[0].center.y
 
 while now_count < count :
     
@@ -96,6 +99,16 @@ while now_count < count :
         continue
 
     #ISBN 추출
+    time.sleep(0.4)
+    pyautogui.click(center_x+100, center_y, clicks=2, interval=0.2)
+    
+    pyautogui.hotkey("ctrl", "a")
+    pyautogui.hotkey("ctrl", "c")
+
+    isbn = pyperclip.paste()
+    index = isbn.find("▼a")
+    index+=2
+    isbn = isbn[index : index + 13]
 
     #초록목차 크롤링
 
