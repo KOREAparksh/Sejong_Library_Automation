@@ -1,6 +1,11 @@
 # Sejong_Library_Automation
 세종대학교 학술정보원 근로장학생을 위한 초록목차 업무자동화 레포지토리
-![project_start_date](https://img.shields.io/badge/version-1.0-green)   ![](https://img.shields.io/badge/EndDate-Feb.%2005.%2021-blue)
+
+![project_start_date](https://img.shields.io/badge/version-1.0-green)  
+
+![](https://img.shields.io/badge/EndDate-Feb.%2005.%2021-blue)
+
+
 ![](https://img.shields.io/badge/Python-3.8.*-9cf)
 
 
@@ -16,8 +21,10 @@
 
 ## 사용방법
 - 사용방법은 아래의 링크를 통해 확인하세요.
+
 [manual](./DocumentStorage/manual.md)
 - 프로그램 설치 및 사용 전 아래의 주의사항을 확인해주세요.
+
 [주의사항](./DocumentStorage/precautions.md)
 - 사용설명서를 인쇄할 경우 아래의 링크를 확인해주세요.
 
