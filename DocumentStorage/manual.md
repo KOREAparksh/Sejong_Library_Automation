@@ -6,8 +6,10 @@
 exe파일만 따로 가져가 실행할 경우 실행이 원할하지 않을 수 있으니, 코드를 다운받아 직접 exe파일로 변환하는 것을 권고합니다.
 
 - 해당 컴퓨터에 python3 이상의 버전이 필요합니다. 아래의 링크에서 파이썬을 다운받아주세요.
+
 [파이썬 다운로드 링크](https://www.python.org/downloads/)
 - 컴퓨터 내 git을 설치하여 해당 코드를 복제하여야 합니다. 아래의 링크를 통해 깃을 설치합니다.
+
 [git 다운로드 링크](https://git-scm.com/downloads)
 
 
@@ -24,6 +26,7 @@ git clone https://github.com/KOREAparksh/Sejong_Library_Automation
 ### 폴더 옮기기
 - 다운받은 코드 내 Sejong Library Automation 폴더를 복사합니다.
 - 경로 : C드라이드 > Program Files (x86) 내에 붙혀넣습니다.
+
 `C:/Program Files (x86)/Sejong Library Automation/`
 
 ### 드라이버 파일 설치하기
@@ -37,10 +40,12 @@ chrome://version/
 Chrome	88.0.4324.146 (공식 빌드) (x86_64)
 ```
 - 아래의 경로에서 자신의 버전과 맞는 드라이버를 설치합니다.
+
 [크롬 드라이버 다운로드](https://chromedriver.chromium.org/downloads)
 
 - 아래의 경로에 드라이버 파일을 붙혀넣습니다.
 (`여기에....`로 시작하는 폴더에 넣으면 안됩니다.)
+
 `C:/Program Files (x86)/Sejong Library Automation/driver/`
 
 
@@ -65,9 +70,20 @@ pyinstaller -w -F main.py
 - 파이썬을 구동시킬 수 있는 IDE를 설치하여 `main.py`를 실행합니다.
 
 <br>
+<br>
+<br>
+
 ## 사용방법
+
 - IWS(통합작업환경)을 실행하여 활성화합니다.
 - `윈도우키` + `→`키를 눌러, IWS 화면을 오른쪽 반으로 분할합니다.
-
 - `main.py` 혹은 `exe파일`을 실행합니다.
-- 
+- 프로그램 실행 후 나오는 입력창에 등록번호범위의 시작번호과 끝번호를 각 입력합니다.
+- 등록범위를 확인 후 `끝났습니다` 알림창이 나올 때까지 마우스를 **건들지 않고** 화면을 확인합니다.
+
+
+에러 발생 및 문제 발생 시 주의사항 메뉴를 확인해주세요.
+
+해당 문서에 없는 오류 또는 에러 발생 시 아래의 연락처로 알려주세요.
+
+`tmdgks22222@gmail.com`
