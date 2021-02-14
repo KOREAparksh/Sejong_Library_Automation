@@ -7,10 +7,10 @@ exe파일만 따로 가져가 실행할 경우 실행이 원할하지 않을 수
 
 - 해당 컴퓨터에 python3 이상의 버전이 필요합니다. 아래의 링크에서 파이썬을 다운받아주세요.
 
-[파이썬 다운로드 링크](https://www.python.org/downloads/)
+  [파이썬 다운로드 링크](https://www.python.org/downloads/)
 - 컴퓨터 내 git을 설치하여 해당 코드를 복제하여야 합니다. 아래의 링크를 통해 깃을 설치합니다.
 
-[git 다운로드 링크](https://git-scm.com/downloads)
+  [git 다운로드 링크](https://git-scm.com/downloads)
 
 
 - cmd를 열어, 파일을 다운로드 받고싶은 폴더로 이동합니다.
@@ -27,7 +27,7 @@ git clone https://github.com/KOREAparksh/Sejong_Library_Automation
 - 다운받은 코드 내 Sejong Library Automation 폴더를 복사합니다.
 - 경로 : C드라이드 > Program Files (x86) 내에 붙혀넣습니다.
 
-`C:/Program Files (x86)/Sejong Library Automation/`
+  `C:/Program Files (x86)/Sejong Library Automation/`
 
 ### 드라이버 파일 설치하기
 - 크롬을 열어 아래의 주소로 이동하여, 현재의 크롬 버전을 확인합니다.
@@ -41,12 +41,12 @@ Chrome	88.0.4324.146 (공식 빌드) (x86_64)
 ```
 - 아래의 경로에서 자신의 버전과 맞는 드라이버를 설치합니다.
 
-[크롬 드라이버 다운로드](https://chromedriver.chromium.org/downloads)
+  [크롬 드라이버 다운로드](https://chromedriver.chromium.org/downloads)
 
 - 아래의 경로에 드라이버 파일을 붙혀넣습니다.
 (`여기에....`로 시작하는 폴더에 넣으면 안됩니다.)
 
-`C:/Program Files (x86)/Sejong Library Automation/driver/`
+  `C:/Program Files (x86)/Sejong Library Automation/driver/`
 
 
 ### 코드 실행하기
@@ -71,7 +71,7 @@ pyinstaller -w -F main.py
 
 <br>
 <br>
-<br>
+c
 
 ## 사용방법
 
@@ -81,6 +81,7 @@ pyinstaller -w -F main.py
 - 프로그램 실행 후 나오는 입력창에 등록번호범위의 시작번호과 끝번호를 각 입력합니다.
 - 등록범위를 확인 후 `끝났습니다` 알림창이 나올 때까지 마우스를 **건들지 않고** 화면을 확인합니다.
 
+<br><br><br>
 
 에러 발생 및 문제 발생 시 주의사항 메뉴를 확인해주세요.
 
