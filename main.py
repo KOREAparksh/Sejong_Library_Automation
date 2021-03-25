@@ -40,22 +40,22 @@ if len(w) == 0 :
     sys.exit()
 
 #등록번호 입력
-while True : 
+while True :
     startNumber = input.getStartRegistNumber()
     if startNumber is None :
         sys.exit()
-    
+
     endNumber = input.getEndRegistNumber()
     if endNumber is None :
         sys.exit()
-    
+
     if isValidRange(startNumber[6:12], endNumber[6:12]) :
         break
 
 #등록번호 확인
 registNumberString = str(startNumber) + " ~ " + str(endNumber)
 
-if output.confirmBeforeTheRunning(registNumberString) == "Cancel" : 
+if output.confirmBeforeTheRunning(registNumberString) == "Cancel" :
     sys.exit()
 
 #등록번호 검색
@@ -63,13 +63,13 @@ findBooks.putsRegistNumber(registNumberString)
 
 #체크박스 선택
 time.sleep(2)
-findBooks.selectCheckBox(int(endNumber) - int(startNumber)) 
+findBooks.selectCheckBox(int(endNumber) - int(startNumber))
 
 #상세보기 진입
 pyautogui.move(200, 0)
-pyautogui.rightClick() 
+pyautogui.rightClick()
 time.sleep(0.3)
-pyautogui.rightClick() 
+pyautogui.rightClick()
 time.sleep(0.3)
 pyautogui.press("down")
 pyautogui.press("enter")
@@ -92,7 +92,7 @@ center_y = w[0].center.y
 browser = WebCrawling.initBrowser()
 
 while now_count < count :
-    
+
     now_count += 1
     #이미 초록목차가 작성된 책인지 확인
     if detailHandler.checkAlreadyHave(w) :
@@ -103,7 +103,7 @@ while now_count < count :
     #ISBN 추출
     time.sleep(0.4)
     pyautogui.click(center_x+100, center_y, clicks=2, interval=0.2)
-    
+
     pyautogui.hotkey("ctrl", "a")
     pyautogui.hotkey("ctrl", "c")
 
@@ -117,10 +117,10 @@ while now_count < count :
 
     #초록목차 저장
     detailHandler.saveInformation(bookIntro, tableContent, w)
-    
+
     #버튼 비활성화 되면 끝남.
     checkLastBook()
     pushNextButton()
-    
+
 output.sendAlertMessage("끝났습니다!")
 browser.quit()
